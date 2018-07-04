@@ -1,0 +1,83 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.9",
+	"appid": "wxa1f93541e10a979d",
+	"projectname": "worldCup1",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "球星榜",
+					"pathName": "pages/rank/rank",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "详情界面",
+					"pathName": "pages/indexDetail/indexDetail",
+					"query": "id=102&scene=9"
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "排行榜",
+					"pathName": "pages/rankWorld/rankWorld",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "菜单",
+					"pathName": "pages/rankMenu/rankMenu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "冠军预测",
+					"pathName": "pages/cham/cham",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "炫耀界面",
+					"pathName": "pages/share/share",
+					"query": ""
+				}
+			]
+		}
+	}
+}

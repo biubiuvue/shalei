@@ -1,0 +1,53 @@
+<view class="container">
+    <image class='bg' mode="widthFix" src='../../img/bg.png'></image>
+    <view class='noData' wx:if="{{noData}}">
+        <image src='../../img/woman.png' class='woman1'></image>
+        <image src='../../img/woman.png' class='woman2'></image>
+        <image src='../../img/woman.png' class='woman3'></image>
+        <image src='../../img/ball.png' class='ball'></image>
+        <view>比赛即将开始...</view>
+        <view>竞猜结果会在第一时间公布</view>
+    </view>
+    <view class='nav' >
+        <view class="nav bc_white">
+            <view class="{{selected?'red':'default'}}" bindtap="selected">竞猜成功</view>
+            <view class="{{selected1?'red':'default'}}" bindtap="selected1">竞猜失败</view>
+            <view class="{{selected2?'red':'default'}}" bindtap="selected2">等待结果</view>
+        </view>
+        <!-- <view class="{{selected?'show':'hidden'}}">for system</view>
+        <view class="{{selected1?'show':'hidden'}}">for activity</view>
+        <view class="{{selected2?'show':'hidden'}}">for asdasda</view> -->
+    </view>
+    <scroll-view  scroll-y="true" class='scroll'>
+    <view class='listContent' wx:if="{{!noData}}">
+        <view wx:for="{{items}}" wx:for-index="index" wx:for-item="item">
+            <view class='list'>
+                <view class='head'>
+                    <view class='result' wx:if="{{item.result=='竞猜成功'}}">{{item.result}}</view>
+                    <view class='result1' wx:else>{{item.result}}</view>
+                    <view class='time'>竞猜时间：{{item.createTime}}</view>
+                </view>
+                <view class='cont'>
+                    <view class='left'>
+                        <image src='{{item.hico}}'></image>
+                        <view>{{item.home}}</view>
+                    </view>
+                    <view class='center'>
+                        <view class='top'>{{item.type}}</view>
+                        <view class='bot'>{{item.hscore}}:{{item.vscore}}</view>
+                    </view>
+                    <view class='right'>
+                        <image src='{{item.vico}}'></image>
+                        <view>{{item.visiting}}</view>
+                    </view>
+                </view>
+                <view wx:if="{{item.result=='竞猜成功'}}">
+                </view>
+                <view wx:else>
+                    <view class='shadow'></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    </scroll-view>
+</view>

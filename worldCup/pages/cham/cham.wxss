@@ -1,0 +1,219 @@
+.cont {
+    width: 750rpx;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.cont1 {
+    width: 750rpx;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.cont .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 750rpx;
+    /* height: 100%; */
+}
+
+.cont .rule {
+    position: absolute;
+    right: 34rpx;
+    top: 30rpx;
+    text-decoration: underline;
+    z-index: 10;
+    color: #fff;
+    font-size: 20rpx;
+    letter-spacing: 1rpx;
+}
+
+.cont .content {
+    position: absolute;
+    top: 181rpx;
+    width: 700rpx;
+    left: 25rpx;
+}
+
+page {
+    background: #8a88a0;
+}
+
+.cont .img1 {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.cont .img2 {
+    width: 680rpx;
+    left: 35rpx;
+    position: fixed;
+    top: 408rpx;
+}
+
+.opCon, .opCon1 {
+    position: fixed;
+    top: 75rpx;
+    left: 53rpx;
+    width: 644rpx;
+    height: 398rpx;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+}
+
+.opCon1 {
+    top: 500rpx;
+}
+
+.opCon image {
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50rpx;
+    position: absolute;
+    top: -50rpx;
+    left: 272rpx;
+}
+
+.opCon .name {
+    text-align: center;
+    color: #fff;
+    font-size: 26rpx;
+    position: relative;
+    top: 64rpx;
+}
+
+.opCon .guess {
+    font-size: 40rpx;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 100rpx;
+    width: 644rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+    overflow: hidden;
+}
+
+.opCon1 .guess {
+    top: 60rpx;
+}
+
+.cont .surpass image {
+    position: relative;
+    left: 0;
+    display: inline-block;
+    width: 136rpx;
+    height: 102rpx;
+    border-radius: 0;
+    top: 0;
+}
+
+.opCon .guess1 {
+    font-size: 64rpx;
+    color: #fcc442;
+    padding-left: 20rpx;
+    padding-right: 14rpx;
+}
+
+.opCon .surpass {
+    font-size: 40rpx;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 160rpx;
+    width: 644rpx;
+    line-height: 102rpx;
+    height: 102rpx;
+}
+
+.opCon1 .surpass {
+    top: 110rpx;
+}
+
+.opCon .surpass1 {
+    font-size: 64rpx;
+    color: #fcc442;
+    padding-left: 20rpx;
+    padding-right: 14rpx;
+    position: relative;
+    top: -30rpx;
+}
+
+.opCon .surpass2 {
+    position: relative;
+    top: -36rpx;
+}
+
+.money {
+    text-align: center;
+    color: #ffd200;
+    font-size: 34rpx;
+    position: relative;
+    top: 160rpx;
+    line-height: 32rpx;
+    height: 32rpx;
+}
+
+.ma {
+    position: fixed;
+    right: 50rpx;
+    display: block;
+    bottom: 57rpx;
+    width: 142rpx;
+    height: 142rpx;
+    border: 4rpx solid #fcc442;
+}
+
+.worldCup {
+    width: 666rpx;
+    height: 363rpx;
+    position: fixed;
+    top: 485rpx;
+    left: 33rpx;
+}
+
+/* 规则弹框 */
+
+.frame {
+    width: 750rpx;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: 0;
+}
+
+.frame .close {
+    width: 342rpx;
+    height: 88rpx;
+    background-color: #fcc441;
+    border-radius: 10rpx;
+    font-size: 36rpx;
+    color: #052b01;
+    line-height: 88rpx;
+    text-align: center;
+    left: 204rpx;
+    position: fixed;
+    top: 859rpx;
+}
+.frame .ruleCham{
+    position: fixed;
+    left: 70rpx;
+    top: 118rpx;
+    height: 877rpx;
+    width: 610rpx;
+}
+.bgTop{
+    width: 750rpx;
+    height: 278rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

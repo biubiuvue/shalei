@@ -1,0 +1,49 @@
+<view class="main">
+  <image class='bg' src='../../img/bg.png'></image>
+  <view class='content'>
+    <view class='title'>全国排行</view>
+    <view class='head'>
+      <text>排名</text>
+      <text>用户名</text>
+      <text>竞猜场次</text>
+      <text>猜中场次</text>
+    </view>
+    <scroll-view scroll-y="true" class='scroll' bindscrolltolower='pullDown'>
+      <view class='list' wx:for="{{items}}" wx:for-index="index" wx:for-item="item">
+        <view class='bgColor' wx:if="{{index%2==0}}">
+          <text wx:if="{{index==0}}" style='color:#ffd712;'>01</text>
+          <text wx:elif="{{index==1}}" style='color:#d3d0c6;'>02</text>
+          <text wx:elif="{{index==2}}" style='color:#c99511;'>03</text>
+          <text wx:elif="{{index<9}}">0{{index+1}}</text>
+          <text wx:else>{{index+1}}</text>
+          <image class='image1' src='{{item.headimgurl}}'></image>
+          <text>{{item.nickname}}</text>
+          <text>{{item.guess}}</text>
+          <text>{{item.win}}</text>
+        </view>
+        <view class='bgColor1' wx:else>
+          <text wx:if="{{index==0}}" style='color:#ffd712;'>01</text>
+          <text wx:elif="{{index==1}}" style='color:#d3d0c6;'>02</text>
+          <text wx:elif="{{index==2}}" style='color:#c99511;'>03</text>
+          <text wx:elif="{{index<9}}">0{{index+1}}</text>
+          <text wx:else>{{index+1}}</text>
+          <image class='image1' src='{{item.headimgurl}}'></image>
+          <text>{{item.nickname}}</text>
+          <text>{{item.guess}}</text>
+          <text>{{item.win}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='myRank'>
+    <view class='myTitle'>我的排名</view>
+    <view class='myRank1'>{{my.rank}}</view>
+    <image class='myUrl' src='{{my.headimgurl}}'></image>
+    <view class='myName'>{{my.nickname}}</view>
+    <view class='myGuess'>{{my.guess}}</view>
+    <view class='myWin'>{{my.win}}</view>
+  </view>
+  <!-- <button class='btn' open-type="share" >炫耀一下</button>  -->
+  <!-- <button class='btn'  bindtap='goShare'>炫耀一下</button>  -->
+  <image class='btnImg' src='../../img/btnImg.png' bindtap='goShare'></image>
+</view>

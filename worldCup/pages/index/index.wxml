@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<view class="container">
+    <view bindtap='music' class='music'>
+        <image wx:if='{{music}}' src='../../img/openMusic.png'></image>
+        <image wx:else src='../../img/closeMusic.png'></image>
+    </view>
+    <view class='guide' bindtap='guide'>
+        <!-- <navigator class='navigator1' open-type="navigate" path="pages/login/login" url='index' app-id='wxf414341f19f8f988' version="release"></navigator> -->
+        <image class='guideImg' src='../../img/bitmap.png'></image>
+        <view>点开看看</view>
+    </view>
+    <view class='grant' wx:if="{{showModel}}">
+        <image mode="widthFix" src='../../img/grantImg.jpg'></image>
+        <button open-type="getUserInfo" class="hiddenbtn"  bindgetuserinfo="agreeGetUser" lang="zh_CN">立即开球</button>
+    </view>
+    <image class='logo' mode="widthFix" src='../../img/banner.png'></image>
+    <view class='rule' bindtap='rule'>竞猜玩法</view>
+    <view class='showRule' wx:if="{{showRule}}">
+        <view class='ruleAlert'>
+            <image class='ruleImg' src='../../img/rule.jpg'></image>
+            <view bindtap='close'>我知道了</view>
+        </view>
+    </view>
+    <image class='bg' mode="widthFix" src='../../img/bg.png'></image>
+    <!-- 滚动消息 -->
+    <view class='infoScroll'>
+        <image src='../../img/ba.png'></image>
+        <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+            <block wx:for="{{msgList}}">
+                <!-- <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate"> -->
+                <swiper-item>
+                    <view class="swiper_item">{{item.content}}</view>
+                </swiper-item>
+                <!-- </navigator> -->
+            </block>
+        </swiper>
+    </view>
+    <!-- 列表 -->
+    <scroll-view class='scroll' scroll-y="true">
+        <view class='blockListContent'>
+            <view class='blockList' wx:for="{{items}}" wx:for-index="index" wx:for-item="item">
+                <view class='listTitle'>{{item.date}}</view>
+                <!-- 某一天的循环，要加判断 -->
+                <view class='listContent' wx:for="{{item.matchList}}" wx:for-index="indexDemo" wx:for-item="itemDemo" bindtap="beginGuess" data-indexdemo="{{indexDemo}}" data-index="{{index}}">
+                    <view wx:if="{{itemDemo.state==1}}">
+                        <view class='hTeam'>
+                            <image src='{{itemDemo.hico}}'></image>
+                            <view>{{itemDemo.home}}</view>
+                        </view>
+                        <view class='center'>
+                            <view class='title'>{{itemDemo.type}}</view>
+                            <view class='vs'>VS</view>
+                            <view class='time'>{{itemDemo.createTime}}</view>
+                            <!-- 判断是否竞猜 -->
+                            <view wx:if="{{itemDemo.win==undefined}}">
+                                <view class='btn'>开始竞猜</view>
+                            </view>
+                            <view wx:else>
+                                <view class='btn' wx:if="{{itemDemo.win=='平'}}">我猜平局</view>
+                                <view wx:else class='btn'>我支持{{itemDemo.win}}</view>
+                            </view>
+                        </view>
+                        <view class='vTeam'>
+                            <image src='{{itemDemo.vico}}'></image>
+                            <view>{{itemDemo.visiting}}</view>
+                        </view>
+                    </view>
+                    <!-- 比赛进行中 -->
+                    <view wx:elif="{{itemDemo.state==2}}">
+                        <view class='hTeam'>
+                            <image src='{{itemDemo.hico}}'></image>
+                            <view>{{itemDemo.home}}</view>
+                        </view>
+                        <view class='center'>
+                            <view class='title'>{{itemDemo.type}}</view>
+                            <view class='vs'>VS</view>
+                            <view class='time'>{{itemDemo.createTime}}</view>
+                            <view class='btnOver'>比赛进行中</view>
+                        </view>
+                        <view class='vTeam'>
+                            <image src='{{itemDemo.vico}}'></image>
+                            <view>{{itemDemo.visiting}}</view>
+                        </view>
+                    </view>
+                    <view wx:else>
+                        <view class='hTeam'>
+                            <image src='{{itemDemo.hico}}'></image>
+                            <view>{{itemDemo.home}}</view>
+                        </view>
+                        <view class='center'>
+                            <view class='title'>{{itemDemo.type}}</view>
+                            <view class='vsScore'>{{itemDemo.hscore}}:{{itemDemo.vscore}}</view>
+                            <view class='btnOver'>竞猜结束</view>
+                        </view>
+                        <view class='vTeam'>
+                            <image src='{{itemDemo.vico}}'></image>
+                            <view>{{itemDemo.visiting}}</view>
+                        </view>
+                    </view>
+
+
+
+
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

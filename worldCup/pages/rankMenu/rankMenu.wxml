@@ -1,0 +1,118 @@
+<view class='main'>
+  <view class='alert' wx:if="{{show}}">
+    <view class='frame'>
+      <image src='../../img/close.png' bindtap='close'></image>
+      <view class='cont'>今日点赞机会已经用完，立即去获取更多机会支持您喜欢的球星吧！</view>
+      <button class='btnShow1' open-type="share">获取3次机会</button>
+      <view class='btnShow2' bindtap='getTen'>获取10次机会</view>
+      <!-- <view class='showLeft'>分享到群</view>
+      <view class='showRight'>关注公众号</view> -->
+      <!-- <button open-type="contact" type="default-dark" size="200" session-from="weapp"/> -->
+    </view>
+    <view class='frame' wx:if="{{getActive}}">
+      <image src='../../img/close.png' bindtap='close1'></image>
+      <view class='title'>获取10次机会</view>
+      <view class='content'>请编辑文字“机会”，发送给客服人员，获取公众号二维码，扫码关注即可领取机会。</view>
+      <view class='contact'>
+        <contact-button class='cBtn' type="default-dark" size="3000" session-from="weapp"></contact-button>
+        <contact-button class='cBtn2' type="default-dark" size="3000" session-from="weapp"></contact-button>
+        <contact-button class='cBtn3' type="default-dark" size="3000" session-from="weapp"></contact-button>
+        <contact-button class='cBtn4' type="default-dark" size="3000" session-from="weapp"></contact-button>
+        <contact-button class='cBtn5' type="default-dark" size="3000" session-from="weapp"></contact-button>
+        <contact-button class='cBtn6' type="default-dark" size="3000" session-from="weapp"></contact-button>
+      </view>
+      <view class='cBtn1'>获取10次机会</view>
+    </view>
+  </view>
+  <image class='bg' src='../../img/bg.png'></image>
+  <!-- <view class='title'>2018俄罗斯世界杯</view> -->
+  <!-- <view class='showTitle'>球星人气榜</view> -->
+  <image class='rankStar' src='../../img/rankStar.png'></image>
+
+  <view class='scrollParent'>
+    <view class="body">
+      <view class="nav bc_white">
+        <view class="{{selected?'red':'default'}}" bindtap="selected">人气榜</view>
+        <view class="{{selected1?'red':'default'}}" bindtap="selected1">射手榜</view>
+      </view>
+      <view class="head {{selected?'show':'hidden'}}">
+        <text>排名</text>
+        <text>球员</text>
+        <text>国家</text>
+        <text>人气值</text>
+      </view>
+      <view class="head1 {{selected1?'show':'hidden'}}">
+        <text>排名</text>
+        <text>球员</text>
+        <text>国家</text>
+        <text>进球数</text>
+      </view>
+      <view class="{{selected?'show':'hidden'}}">
+        <scroll-view scroll-y="true" class='scroll'>
+          <view class='list' wx:for="{{items}}" wx:for-index="index" wx:for-item="item">
+            <view class='bgColor' wx:if="{{index%2==0}}">
+              <text wx:if="{{index==0}}" style='color:#ffd712;'>01</text>
+              <text wx:elif="{{index==1}}" style='color:#d3d0c6;'>02</text>
+              <text wx:elif="{{index==2}}" style='color:#c99511;'>03</text>
+              <text wx:elif="{{index<9}}">0{{index+1}}</text>
+              <text wx:else>{{index+1}}</text>
+              <image class='image1' src='{{item.headimgurl}}'></image>
+              <text>{{item.name}}</text>
+              <text>{{item.country}}</text>
+              <text>{{item.zan}}</text>
+              <image bindtap="zan" data-indexid="{{index}}" data-index="{{item.id}}" class='image2' src='../../img/good.png'></image>
+              <view wx:if="{{index<=0}}">
+                <view class='addOne1' animation="{{animations[0]}}">+1</view>
+              </view>
+              <view wx:else>
+                <view class='addOne' animation="{{animations[index]}}">+1</view>
+              </view>
+              <!-- <view class='addOne' class='addOne' animation="{{animations[index]}}">+1</view> -->
+            </view>
+            <view class='bgColor1' wx:else>
+              <text wx:if="{{index==0}}" style='color:#ffd712;'>01</text>
+              <text wx:elif="{{index==1}}" style='color:#d3d0c6;'>02</text>
+              <text wx:elif="{{index==2}}" style='color:#c99511;'>03</text>
+              <text wx:elif="{{index<9}}">0{{index+1}}</text>
+              <text wx:else>{{index+1}}</text>
+              <image class='image1' src='{{item.headimgurl}}'></image>
+              <text>{{item.name}}</text>
+              <text>{{item.country}}</text>
+              <text>{{item.zan}}</text>
+              <image bindtap="zan" data-indexid="{{index}}" data-index="{{item.id}}" class='image2' src='../../img/good.png'></image>
+              <view class='addOne' animation="{{animations[index]}}">+1</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="{{selected1?'show':'hidden'}}">
+        <scroll-view scroll-y="true" class='scroll'>
+          <view class='list1' wx:for="{{items1}}" wx:for-index="index" wx:for-item="item">
+            <view class='bgColor' wx:if="{{index%2==0}}">
+              <text wx:if="{{index==0}}" style='color:#ffd712;'>01</text>
+              <text wx:elif="{{index==1}}" style='color:#d3d0c6;'>02</text>
+              <text wx:elif="{{index==2}}" style='color:#c99511;'>03</text>
+              <text wx:elif="{{index<9}}">0{{index+1}}</text>
+              <text wx:else>{{index+1}}</text>
+              <image class='image1' src='{{item.headimgurl}}'></image>
+              <text>{{item.name}}</text>
+              <text>{{item.country}}</text>
+              <text>{{item.goals}}</text>
+            </view>
+            <view class='bgColor1' wx:else>
+              <text wx:if="{{index==0}}" style='color:#ffd712;'>01</text>
+              <text wx:elif="{{index==1}}" style='color:#d3d0c6;'>02</text>
+              <text wx:elif="{{index==2}}" style='color:#c99511;'>03</text>
+              <text wx:elif="{{index<9}}">0{{index+1}}</text>
+              <text wx:else>{{index+1}}</text>
+              <image class='image1' src='{{item.headimgurl}}'></image>
+              <text>{{item.name}}</text>
+              <text>{{item.country}}</text>
+              <text>{{item.goals}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

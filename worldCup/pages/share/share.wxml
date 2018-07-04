@@ -1,0 +1,26 @@
+<view class='cont'>
+    <image mode="widthFix" class='img1' src='{{item.bg}}'></image>
+    <view class='opCon'>
+        <image src='{{item.headimgurl}}'></image>
+        <view class='name'>{{item.nickname}}</view>
+        <view class='guess'>我猜中了
+            <text class='guess1'>{{item.win}}</text> 场世界杯比赛</view>
+        <view class='surpass'>超越了
+            <text class='surpass1'>{{item.ranks}}%</text>的球迷</view>
+    </view>
+    <image mode="widthFix" class='img2' src='{{item.worldcup}}'></image>
+</view>
+
+<view class="btn">
+    <view class='left' open-type="share">
+        <button open-type="share" class='shareBtn'></button>
+        <image open-type="share" src='../../img/shareImg.png'></image>
+        <view open-type="share">转发到群</view>
+    </view>
+    <view class='right' bindtap='share2'>
+        <image src='../../img/save.png'></image>
+        <view>生成图片分享给好友</view>
+    </view>
+    <!-- canvas -->
+    <canvas canvas-id="myCanvas" style="width:750px;height:1334px;position:fixed;left:100rpx;top:2000rpx;background:red;" />
+</view>

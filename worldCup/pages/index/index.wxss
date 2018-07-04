@@ -1,0 +1,340 @@
+.container {
+    width: 750rpx;
+    height: 100%;
+}
+
+/* 授权界面 */
+
+.grant {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 750rpx;
+    z-index: 10000;
+}
+
+.grant image {
+    width: 100%;
+    position: absolute;
+    top: -127rpx;
+    left: 0;
+}
+
+.grant button {
+    width: 322rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    color: #000;
+    font-size: 36rpx;
+    position: absolute;
+    top: 709rpx;
+    left: 225rpx;
+    background-color: #fcc441;
+    border-radius: 10rpx;
+}
+
+/* 授权界面结束 */
+
+.logo {
+    position: fixed;
+    left: 0;
+    top: 0rpx;
+    width: 750rpx;
+    z-index: 10;
+}
+
+.bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 750rpx;
+}
+
+.rule {
+    position: fixed;
+    right: 39rpx;
+    top: 39rpx;
+    width: 150rpx;
+    height: 28rpx;
+    font-size: 20rpx;
+    line-height: 0px;
+    letter-spacing: 0px;
+    color: #fff;
+    z-index: 1000;
+    text-decoration: underline;
+    text-align: right;
+}
+
+.showRule {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 750rpx;
+    background-color: rgba(33, 33, 33, 0.5);
+    z-index: 1000;
+}
+
+.ruleAlert {
+    width: 610rpx;
+    height: 806rpx;
+    border-radius: 35rpx;
+    position: absolute;
+    left: 70rpx;
+    top: 148rpx;
+    overflow: hidden;
+}
+
+.showRule .ruleImg {
+    width: 610rpx;
+    height: 806rpx;
+    border-radius: 35rpx;
+    position: absolute;
+    top: 0;
+}
+
+.ruleAlert view {
+    width: 342rpx;
+    height: 88rpx;
+    background-color: #fcc441;
+    border-radius: 10rpx;
+    position: absolute;
+    left: 134rpx;
+    bottom: 53rpx;
+    font-size: 36rpx;
+    line-height: 88rpx;
+    color: #052b01;
+    text-align: center;
+}
+
+.scroll {
+    position: fixed;
+    width: 750rpx;
+    height: 900rpx;
+    min-height: 900rpx;
+    top: 388rpx;
+    padding-bottom: 400rpx;
+}
+
+/* 列表循环 */
+
+.blockListContent {
+    width: 750rpx;
+    padding: 25rpx;
+    padding-top: 0;
+    padding-bottom: 160rpx;
+    /* height: 1000rpx; */
+}
+
+.blockList {
+    border-radius: 30rpx;
+    width: 700rpx;
+    background-color: rgba(0, 22, 8, 0.57);
+}
+
+.listTitle {
+    color: #fff;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 74rpx;
+    background-color: rgba(0, 22, 8, 0.57);
+    border-radius: 30rpx 30rpx 0 0;
+}
+
+.listContent {
+    position: relative;
+    width: 564rpx;
+    height: 260rpx;
+    margin: 26rpx auto;
+    border-bottom: solid 4rpx rgba(33, 33, 33, 0.5);
+    overflow: hidden;
+}
+
+.listContent .hTeam image {
+    position: absolute;
+    top: 10rpx;
+    left: 2rpx;
+    width: 140rpx;
+    height: 104rpx;
+}
+
+.listContent .hTeam view {
+    position: absolute;
+    top: 138rpx;
+    left: 0;
+    color: #fff;
+    font-size: 28rpx;
+    text-align: center;
+    width: 140rpx;
+}
+
+.listContent .vTeam image {
+    position: absolute;
+    top: 10rpx;
+    right: 2rpx;
+    width: 140rpx;
+    height: 104rpx;
+}
+
+.listContent .vTeam view {
+    position: absolute;
+    top: 138rpx;
+    right: 0;
+    color: #fff;
+    font-size: 28rpx;
+    text-align: center;
+    width: 140rpx;
+}
+
+.listContent .center {
+    width: 214rpx;
+    height: 138rpx;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.listContent .center .title {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    letter-spacing: 5rpx;
+    height: 40rpx;
+}
+
+.listContent .center .vs {
+    font-size: 48rpx;
+    color: #fff812;
+    letter-spacing: 5rpx;
+    line-height: 60rpx;
+    height: 50rpx;
+}
+
+.listContent .center .vsScore {
+    font-size: 48rpx;
+    color: #fff812;
+    letter-spacing: 24rpx;
+    line-height: 60rpx;
+    height: 50rpx;
+}
+
+.listContent .center .time {
+    font-size: 28rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.listContent .center .btn {
+    width: 214rpx;
+    height: 62rpx;
+    background-color: #fcc441;
+    border-radius: 6rpx;
+    font-size: 26rpx;
+    line-height: 62rpx;
+    text-align: center;
+    position: absolute;
+    top: 162rpx;
+    overflow: hidden;
+}
+
+.listContent .center .btnOver {
+    width: 214rpx;
+    height: 62rpx;
+    font-weight: normal;
+    background-color: #ccc;
+    border-radius: 6rpx;
+    font-size: 26rpx;
+    line-height: 62rpx;
+    text-align: center;
+    position: absolute;
+    top: 162rpx;
+}
+
+.guide {
+    position: fixed;
+    width: 158rpx;
+    height: 80rpx;
+    z-index: 9990;
+    overflow: hidden;
+    background: #043301;
+    border-radius: 40rpx 0 0 40rpx;
+    right: 0;
+    bottom: 61rpx;
+}
+
+.guide image {
+    width: 63rpx;
+    height: 63rpx;
+    position: absolute;
+    left: 9rpx;
+    top: 9rpx;
+}
+
+.guide view {
+    font-size: 24rpx;
+    height: 60rpx;
+    line-height: 30rpx;
+    width: 28px;
+    position: absolute;
+    right: 18rpx;
+    top: 10rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.navigator1 {
+    position: absolute;
+    z-index: 9999;
+    opacity: 0;
+    width: 153rpx;
+    height: 80rpx;
+}
+
+.music {
+    position: fixed;
+    width: 54rpx;
+    height: 54rpx;
+    left: 40rpx;
+    top: 29rpx;
+    z-index: 9999;
+}
+
+.music image {
+    width: 54rpx;
+    height: 54rpx;
+}
+
+.infoScroll {
+    position: fixed;
+    width: 634rpx;
+    height: 50rpx;
+    background-color: rgba(0, 52, 0, 0.7);
+    border-radius: 5rpx;
+    z-index: 1000;
+    left: 58rpx;
+    top: 324rpx;
+}
+
+.infoScroll image {
+    width: 24rpx;
+    height: 24rpx;
+    position: relative;
+    left: 22rpx;
+    top: 4rpx;
+}
+
+.swiper_container {
+    position:absolute;
+    left: 60rpx;
+    top: 10rpx;
+    height: 50rpx;
+    width: 570rpx;
+}
+.swiper_item {
+    font-size: 25rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 2rpx;
+    color: #fff;
+}

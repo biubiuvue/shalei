@@ -1,0 +1,481 @@
+page {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  width: 750rpx;
+  height: 100%;
+  position: relative;
+}
+
+.bg {
+  position: fixed;
+  width: 750rpx;
+  /* height: auto; */
+}
+
+.type {
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  height: 42rpx;
+  line-height: 42rpx;
+  letter-spacing: 3rpx;
+  position: relative;
+  top: 45rpx;
+  font-weight: normal;
+}
+
+.time {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 52rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.content {
+  width: 620rpx;
+  height: 270rpx;
+  position: relative;
+  top: 67rpx;
+  left: 65rpx;
+}
+
+.content .left {
+  width: 140rpx;
+}
+
+.content .left image {
+  width: 140rpx;
+  height: 105rpx;
+  background: red;
+}
+
+.content .left view {
+  text-align: center;
+  color: #fff;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.content .right {
+  width: 140rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.content .center {
+  position: absolute;
+  top: 26rpx;
+  width: 120rpx;
+  color: #fff;
+  left: 250rpx;
+  text-align: center;
+  font-size: 56rpx;
+  height: 77rpx;
+}
+.content .center {
+  position: absolute;
+  top: 26rpx;
+  width: 120rpx;
+  color: #fffb13;
+  left: 250rpx;
+  text-align: center;
+  font-size: 56rpx;
+  height: 77rpx;
+  letter-spacing: 20rpx;
+}
+.content .right image {
+  width: 140rpx;
+  height: 105rpx;
+  background: red;
+}
+
+.content .right view {
+  text-align: center;
+  color: #fff;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.content .btn {
+  width: 190rpx;
+  height: 66rpx;
+  background-color: #fcc441;
+  border-radius: 4rpx;
+  text-align: center;
+  line-height: 66rpx;
+  font-size: 30rpx;
+  position: absolute;
+  top: 194rpx;
+}
+
+.content .btn1 {
+  left: 2rpx;
+}
+
+.content .btn2 {
+  left: 216rpx;
+}
+
+.content .btn3 {
+  right: 2rpx;
+}
+
+/* bar */
+
+.bar {
+  width: 620rpx;
+  height: 92rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 110rpx;
+  left: 18rpx;
+  padding: 38rpx 46rpx;
+}
+
+.bar .barLeft {
+  width: 40rpx;
+  position: absolute;
+  left: 46rpx;
+  top: 40rpx;
+}
+
+.bar .barLeft image {
+  width: 38rpx;
+  height: 27rpx;
+  background: red;
+}
+
+.bar .barLeft view {
+  text-align: center;
+  color: #fff;
+  font-size: 20rpx;
+  width: 150rpx;
+  position: absolute;
+  right: -52rpx;
+}
+
+.bar .barRight {
+  width: 40rpx;
+  position: absolute;
+  right: 46rpx;
+  top: 40rpx;
+}
+
+.bar .barRight image {
+  width: 38rpx;
+  height: 27rpx;
+  background: red;
+}
+
+.bar .barRight view {
+  text-align: center;
+  color: #fff;
+  font-size: 20rpx;
+  width: 150rpx;
+  position: absolute;
+  right: -52rpx;
+}
+
+/* 进度条 */
+
+.barLine {
+  width: 460rpx;
+  height: 10rpx;
+  padding: 0;
+  position: relative;
+  left: 80rpx;
+  top: 28rpx;
+}
+
+.barLine .barLineLeft {
+  height: 10rpx;
+  width: 189rpx;
+  background-color: #268be5;
+  border-radius: 5rpx 0 0 5rpx;
+}
+
+.barLine .barLineRight {
+  height: 10rpx;
+  width: 60rpx;
+  background-color: #c31726;
+  border-radius: 0 5rpx 5rpx 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.barLine image {
+  height: 54rpx;
+  width: 35rpx;
+  position: absolute;
+  top: -40rpx;
+}
+
+.sum {
+  width: 460rpx;
+  padding: 0;
+  position: relative;
+  left: 80rpx;
+  top: 50rpx;
+}
+
+.sum .sumLeft image {
+  padding: 0;
+  width: 23rpx;
+  height: 25rpx;
+  position: absolute;
+  top: 0;
+}
+
+.sum .sumLeft view {
+  text-align: left;
+  font-size: 20rpx;
+  color: #fff;
+  height: 24rpx;
+  position: absolute;
+  left: 38rpx;
+  top: -1rpx;
+}
+
+.sum .sumRight image {
+  width: 23rpx;
+  height: 25rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sum .sumRight view {
+  text-align: right;
+  font-size: 20rpx;
+  color: #fff;
+  height: 24rpx;
+  position: absolute;
+  right: 38rpx;
+  top: -1rpx;
+}
+
+.content .btnshow {
+  background-color: #fcc441;
+  color: #052b01;
+}
+
+.content .btnhide {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  height: 164rpx;
+  background-color: #ccc;
+  z-index: 100000000;
+}
+
+.shareInfo {
+  /* width: 105rpx; */
+  height: 37rpx;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  letter-spacing: 0px;
+  color: #447f27;
+  position: absolute;
+  bottom: 28rpx;
+  left: 114rpx;
+}
+
+.shareInfo1 {
+  /* width: 261rpx; */
+  height: 37rpx;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  letter-spacing: 0px;
+  color: #447f27;
+  position: absolute;
+  bottom: 28rpx;
+  right: 101rpx;
+}
+
+.shareBtn {
+  position: absolute;
+  top: 26rpx;
+  left: 124rpx;
+  width: 59rpx;
+  height: 75rpx;
+  opacity: 0;
+  z-index: 10000;
+}
+
+.shareImg {
+  position: absolute;
+  top: 26rpx;
+  left: 136rpx;
+  width: 59rpx;
+  height: 55rpx;
+}
+
+.shareImg1 {
+  position: absolute;
+  top: 26rpx;
+  right: 183rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.sharebg {
+  position: absolute;
+  left: 57rpx;
+  top: 665rpx;
+  width: 636rpx;
+  height: 282rpx;
+}
+
+.winWord{
+  position: absolute;
+  left: 157rpx;
+  top: 760rpx;
+  width: 280rpx;
+  height: 143rpx;
+  z-index: 90000;
+  text-align: center;
+}
+.winWord .winWordMiddle{
+  color: #fadf4b;
+  font-size: 50rpx;
+  line-height: 62rpx;
+  width: 230rpx;
+  text-align: center;
+}
+.winWord .winWordWin{
+  color: #fadf4b;
+  font-size: 50rpx;
+  line-height: 62rpx;
+  text-align: center;
+}
+.winWord .winWordWin .winWordWin1{
+  color: #fadf4b;
+  font-size: 50rpx;
+  line-height: 62rpx;
+  text-align: center;
+}
+.winWord .winWordWin .winWordWin2{
+  color: #fadf4b;
+  font-size: 50rpx;
+  line-height: 62rpx;
+  text-align: center;
+}
+
+
+
+
+
+
+
+.shareWord {
+  position: absolute;
+  top: 824rpx;
+  right: 80rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+.shareMaWord1{
+  position: absolute;
+  left: 142rpx;
+  top: 968rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.shareMaWord2{
+  position: absolute;
+  left: 142rpx;
+  top: 1003rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+.shareMaImg{
+  position: absolute;
+  top: 932rpx;
+  right: 141rpx;
+  height: 130rpx;
+  width: 130rpx;
+}
+
+
+
+
+.shodowSubmit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000011;
+}
+
+.shodowSubmitCon {
+  position: absolute;
+  left: 70rpx;
+  top: 355rpx;
+  width: 610rpx;
+  height: 444rpx;
+  background-color: #fff;
+  border-radius: 35rpx;
+}
+
+.shodowSubmitCon .title1 {
+  position: relative;
+  top: 79rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.shodowSubmitCon .title2 {
+  position: relative;
+  top: 110rpx;
+  text-align: center;
+  width: 500rpx;
+  font-size: 28rpx;
+  font-weight: 200;
+  left: 56rpx;
+}
+
+.shodowSubmitCon .botton1 {
+  width: 250rpx;
+  height: 80rpx;
+  background-color: #ccc;
+  border-radius: 6rpx;
+  position: absolute;
+  left: 37rpx;
+  bottom: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  font-weight: 200;
+}
+
+.shodowSubmitCon .botton2 {
+  width: 250rpx;
+  height: 80rpx;
+  background-color: #fcc441;
+  border-radius: 6rpx;
+  position: absolute;
+  right: 37rpx;
+  bottom: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #000;
+  font-weight: 200;
+}

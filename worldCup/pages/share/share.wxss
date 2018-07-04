@@ -1,0 +1,135 @@
+/* pages/share/share.wxss */
+page{
+    position: fixed;
+    width: 750rpx;
+    height: 100%;
+    background: #ccc;
+}
+.btn{
+    position: fixed;
+    bottom: 0;
+    height: 164rpx;
+    width: 750rpx;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+}
+.left{
+    position: fixed;
+    text-align: center;
+}
+.left image{
+    width: 59rpx;
+    height: 55rpx;
+    position: absolute;
+    top: 26rpx;
+    left: 124rpx;
+}
+.left view{
+    position: fixed;
+    left: 100rpx;
+    bottom: 28rpx;
+    display: inline;
+    font-size: 26rpx;
+    color: #447f27;
+}
+.left button{
+    position: absolute;
+    left: 100rpx;
+    top: 26rpx;
+    height: 100rpx;
+    width: 105rpx;
+    opacity: 0;
+}
+.right{
+    position: relative;
+    text-align: center;
+}
+.right image{
+    width: 59rpx;
+    height: 55rpx;
+    position: absolute;
+    top: 26rpx;
+    right:200rpx;
+}
+.right view{
+    position: fixed;
+    right: 100rpx;
+    bottom: 28rpx;
+    display: inline;
+    font-size: 26rpx;
+    color: #447f27;
+}
+.cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 750rpx;
+    height: 100%;
+}
+.cont .img1{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+.cont .img2{
+    width: 680rpx;
+    left: 35rpx;
+    position: fixed;
+    top: 408rpx;
+}
+.opCon{
+    position: fixed;
+    top: 75rpx;
+    left: 53rpx;
+    width: 644rpx;
+	height: 325rpx;
+	background-color: rgba(255, 255, 255, 0.18);
+	border-radius: 18px;
+}
+.opCon image{
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50rpx;
+    position: absolute;
+    top: -50rpx;
+    left: 272rpx;
+}
+.opCon .name{
+    text-align: center;
+    color: #fff;
+    font-size: 26rpx;
+    position: relative;
+    top: 64rpx;
+}
+.opCon .guess{
+    font-size: 40rpx;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 80rpx;
+    width: 644rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+.opCon .guess1{
+    font-size: 64rpx;
+    color: #fcc442;
+    padding-left: 20rpx;
+    padding-right: 14rpx;
+}
+.opCon .surpass{
+    font-size: 40rpx;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 120rpx;
+    width: 644rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+.opCon .surpass1{
+    font-size: 64rpx;
+    color: #fcc442;
+    padding-left: 20rpx;
+    padding-right: 14rpx;
+}

@@ -1,0 +1,106 @@
+<view class='container'>
+  <image class='bg' mode="widthFix" src='../../img/bgDetail1.png'></image>
+  <view class='type'>{{total.type}}</view>
+  <view class='time'>{{total.createDate}} {{total.createTime}}</view>
+
+  <view class='shodowSubmit' wx:if="{{shodowSubmit}}">
+    <view class='shodowSubmitCon'>
+      <view class='title1'>竞猜提示</view>
+      <view class='title2'>每场比赛只有一次竞猜机会，竞猜成功后不可更改。</view>
+      <view class='botton1' bindtap='btnSubmitHide'>返回重选</view>
+      <!-- <view class='botton2' bindtap='btnSubmitShow'>提交竞猜</view> -->
+
+      <form bindsubmit="btnSubmitShow" report-submit='true'>
+        <button class='botton2' form-type="submit">提交竞猜</button>
+      </form>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='left'>
+      <image src='{{total.hico}}'></image>
+      <view>{{total.home}}</view>
+    </view>
+    <view wx:if="{{total.state==1||total.state==2}}" class='center'>VS</view>
+    <view class='center center1' wx:else>{{total.hscore}}:{{total.vscore}}</view>
+    <view class='right'>
+      <image src='{{total.vico}}'></image>
+      <view>{{total.visiting}}</view>
+    </view>
+    <view wx:if="{{total.state==1}}">
+      <view class='btn btn1 {{((has)||(total.win==total.home))?btnshow:btnhide}}' bindtap='btnSubmit' data-index="{{total.home}}">胜利</view>
+      <view class='btn btn2 {{((has)||(total.win=="平"))?btnshow:btnhide}}' bindtap='btnSubmit' data-index="平">平局</view>
+      <view class='btn btn3 {{((has)||(total.win==total.visiting))?btnshow:btnhide}}' bindtap='btnSubmit' data-index="{{total.visiting}}">胜利</view>
+    </view>
+    <view wx:elif="{{total.state==2}}">
+      <view class='btn btn1 {{(total.win==total.home)?btnshow:btnhide}}'>胜利</view>
+      <view class='btn btn2 {{(total.win=="平")?btnshow:btnhide}}'>平局</view>
+      <view class='btn btn3 {{(total.win==total.visiting)?btnshow:btnhide}}'>胜利</view>
+    </view>
+    <view wx:else>
+      <view class='btn btn1 {{(total.win==total.home)?btnshow:btnhide}}'>胜利</view>
+      <view class='btn btn2 {{(total.win=="平")?btnshow:btnhide}}'>平局</view>
+      <view class='btn btn3 {{(total.win==total.visiting)?btnshow:btnhide}}'>胜利</view>
+    </view>
+  </view>
+  <!-- bar -->
+  <view class='bar'>
+    <view class='barLeft'>
+      <image src='{{total.hico}}'></image>
+      <view>{{total.home}}</view>
+    </view>
+    <view class='barLine'>
+      <!-- <view wx:if="{{total.hwin==0||total.hwin==0}}""></view> -->
+      <view class='barLineLeft' style='width:{{(total.hwin)*(460)/(total.hwin+total.vwin)}}rpx'></view>
+      <view class='barLineRight' style='width:{{(total.vwin)*(460)/(total.hwin+total.vwin)}}rpx'></view>
+      <image src='../../img/hot.png' style='left:{{(total.hwin)*(460)/(total.hwin+total.vwin)-10}}rpx'></image>
+    </view>
+    <view class='sum'>
+      <view class='sumLeft'>
+        <image src='../../img/left.png'></image>
+        <view>{{total.hwin}}</view>
+      </view>
+      <view class='sumRight'>
+        <image src='../../img/right.png'></image>
+        <view>{{total.vwin}}</view>
+      </view>
+    </view>
+    <view class='barRight'>
+      <image src='{{total.vico}}'></image>
+      <view>{{total.visiting}}</view>
+    </view>
+  </view>
+  <!-- 下面隐藏区域 -->
+  <!-- <view> -->
+  <view wx:if="{{(total.win!=null)&&(total.win!=undefined)}}">
+    <image class='sharebg' src='../../img/sharebg.png'></image>
+    <!-- <view class='winWord'>{{winWord}}</view> -->
+    <view class='winWord'>
+      <view class='winWordMiddle' wx:if="{{winWord=='我猜两队不分胜负'}}">
+        我猜两队不分胜负
+      </view>
+      <view class='winWordWin' wx:else>
+        <view class='winWordWin1'>我支持</view>
+        <view class='winWordWin2'>{{winWord}}</view>
+      </view>
+    </view>
+    <view class='shareWord'>不服你来呀！</view>
+    <view class='shareMaWord1'>2018俄罗斯世界杯</view>
+    <view class='shareMaWord2'>疯狂竞猜 给你好看</view>
+    <image class='shareMaImg' src='{{maImg}}'></image>
+    <view class='bottom'>
+      <view bindtap='share'>
+        <button open-type="share" class='shareBtn'></button>
+        <image class='shareImg' open-type="share" src='../../img/shareImg.png'></image>
+        <view class='shareInfo' open-type="share">转发到群</view>
+      </view>
+      <view bindtap='save'>
+        <image class='shareImg1' src='../../img/save.png'></image>
+        <view class='shareInfo1'>保存图片分享给好友</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- canvas -->
+<canvas canvas-id="myCanvas" style="width:750px;height:1234px;position:fixed;left:100rpx;top:2000rpx;background:red;" />

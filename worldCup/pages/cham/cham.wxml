@@ -1,0 +1,43 @@
+
+<view class='cont conssss' wx:if="{{number!=0}}">
+    <!-- 如果选了两支 -->
+    <view class='cont1' wx:if="{{number>=1}}">
+        <image mode="widthFix" class='img1' src='{{item.bg}}'></image>
+        <view class='opCon'>
+            <image src='{{item.headimgurl}}'></image>
+            <view class='name'>{{item.nickname}}</view>
+            <view class='guess'>我是第
+                <text class='guess1'>{{item.vote1Num}}</text> 位支持者</view>
+            <view class='surpass'>
+                <image src='{{item.vote1Ico}}'></image>
+                <text class='surpass1'>{{item.vote1Name}}</text>
+                <text class='surpass2'>的球迷</text>
+            </view>
+            <!-- <view class='money'>预计最高瓜分金额 88 元</view> -->
+        </view>
+        <view class='opCon opCon1'  wx:if="{{number==2}}">
+            <view class='guess'>我是第
+                <text class='guess1'>{{item.vote2Num}}</text> 位支持者</view>
+            <view class='surpass'>
+                <image src='{{item.vote2Ico}}'></image>
+                <text class='surpass1'>{{item.vote2Name}}</text>
+                <text class='surpass2'>的球迷</text>
+            </view>
+             <view class='money'>预计最高瓜分金额 88 元</view> 
+        </view>
+        <view wx:else>
+            <image class='worldCup' mode='widthFix' src='{{item.worldcup}}'></image>
+        </view>
+        <!-- <image class='ma' src='{{item.qrcode}}'></image> -->
+    </view>
+</view>
+<view class='cont' wx:if="{{number==0}}">
+    <view bindtap='rule' class='rule'>活动规则</view>
+    <image mode="widthFix" class='bg' src='{{item.championIco_bg}}'></image>
+    <image mode="widthFix" class='bgTop' src='{{item.championIco_cup}}'></image>
+    <image mode="widthFix" class='content' src='{{item.championIco_des}}'></image>
+    <view class='frame' wx:if="{{rule}}">
+        <image class='ruleCham' src='../../img/ruleCham.png'></image>
+        <view class='close'  bindtap='close'>我知道了</view>
+    </view>
+</view>

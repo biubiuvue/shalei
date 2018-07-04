@@ -1,0 +1,238 @@
+.main {
+  padding: 0;
+  margin: 0;
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.main .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+}
+.main .content{
+  width: 700rpx;
+	/* height: 857rpx; */
+  position: absolute;
+  left: 25rpx;
+  top: 27rpx;
+	background-color: rgba(0, 52, 0, 0.7);
+	border-radius: 30rpx;
+  overflow: hidden;
+  bottom: 300rpx;
+  padding-bottom: 90rpx;
+}
+/* scroll */
+.scroll{
+  width: 700rpx;
+  /* height:700rpx; */
+  /* height: 100%; */
+  position: absolute;
+  top: 180rpx;
+  bottom: 50rpx;
+}
+
+
+.title{
+  color: #fff;
+  line-height: 74rpx;
+  height: 74rpx;
+  padding:0;
+  text-align: center;
+  font-weight: 200;
+  background-color: #1e7031;
+}
+.head{
+  position: relative;
+  height: 42rpx;
+  color: #fff;
+  line-height: 42rpx;
+  font-size: 30rpx;
+  font-weight: 200;
+  padding-top: 34rpx;
+  padding-bottom: 12rpx;
+}
+.head text:nth-child(1){
+  padding-left: 38rpx;
+}
+.head text:nth-child(2){
+  padding-left: 68rpx;
+}
+.head text:nth-child(3){
+  padding-left: 115rpx;
+}
+.head text:nth-child(4){
+  padding-left: 35rpx;
+}
+
+.list {
+  line-height: 90rpx;
+  /* background-color: rgba(8, 44, 6, 0.57); */
+  position: relative;
+}
+
+.bgColor {
+  background-color: rgba(8, 44, 6, 0.57);
+  height: 90rpx;
+}
+
+.bgColor1 {
+  /* background: rgba(8, 44, 6, 0.57); */
+  height: 99rpx;
+  padding-top: 9rpx;
+}
+
+
+.list text {
+  text-align: left;
+  display: inline-block;
+}
+
+.list text:nth-child(1) {
+  padding-left: 40rpx;
+  padding-right: 66rpx;
+  letter-spacing: 1rpx;
+  font-size: 38rpx;
+  color: #16b13a;
+  display: inline-block;
+  width: 44rpx;
+  position: relative;
+  top: -10rpx;
+}
+
+.list :nth-child(3) {
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: normal;
+  position: absolute;
+  left: 236rpx;
+  width: 150rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list :nth-child(4) {
+  padding-left: 11rpx;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: normal;
+  position: absolute;
+  left: 410rpx;
+}
+
+.list :nth-child(5) {
+  padding-left: 11rpx;
+  color: #fab934;
+  font-size: 26rpx;
+  font-weight: normal;
+  position: absolute;
+  left: 572rpx;
+}
+.list .image1 {
+  width: 70rpx;
+  height: 70rpx;
+  position: relative;
+  top: 15rpx;
+  border-radius: 40rpx;
+}
+.list .image2 {
+  width: 36rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+}
+
+.bgColor1 .image2{
+  top: 30rpx;
+}
+.btn{
+  position: fixed;
+  bottom: 34rpx;
+  left: 25rpx;
+  width: 700rpx;
+	height: 88rpx;
+	background-color: #fcc441;
+	border-radius: 10rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #052b01;
+  font-size: 32rpx;
+  font-weight: 200rpx;
+}
+.btnImg{
+    position: fixed;
+    bottom: 3rpx;
+    height: 163rpx;
+    width: 611rpx;
+    left: 95rpx;
+}
+.myRank{
+  position: fixed;
+  bottom: 158rpx;
+  z-index: 100;
+  left: 25rpx;
+  width: 700rpx;
+	height: 174rpx;
+	background-color: #1c6f0e;
+	border-radius: 20rpx;
+}
+.myTitle{
+  position: relative;
+  top: 23rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 45rpx;
+	letter-spacing: 1rpx;
+	color: #fff;
+}
+.myRank1{
+  position: absolute;
+  left: 38rpx;
+  bottom: 34rpx;
+  color: #16b13a;
+  font-size: 38rpx;
+}
+.myUrl{
+  position: absolute;
+  left: 114rpx;
+  bottom: 28rpx;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+}
+.myName{
+  position: absolute;
+  left: 198rpx;
+  bottom: 25rpx;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  color: #fff;
+    width: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.myGuess{
+  position: absolute;
+  left: 410rpx;
+  bottom: 30rpx;
+  line-height: 60rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+.myWin{
+  position: absolute;
+  right: 106rpx;
+  bottom: 30rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  color: #fcc442;
+}

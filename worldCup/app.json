@@ -1,0 +1,57 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/indexDetail/indexDetail",
+        "pages/rank/rank",
+        "pages/share/share",
+        "pages/cham/cham",
+        "pages/rankMenu/rankMenu",
+        "pages/rankWorld/rankWorld",
+        "pages/my/my"
+    ],
+    "enablePullDownRefresh": true,
+    "window": {
+        "backgroundTextStyle": "#333",
+        "navigationBarBackgroundColor": "#16b13a",
+        "navigationBarTitleText": "世界杯竞猜",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#000000",
+        "selectedColor": "#2d700c",
+        "borderStyle": "white",
+        "list": [
+            {
+                "selectedIconPath": "img/indexed.png",
+                "iconPath": "img/index.png",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "selectedIconPath": "img/ranked.png",
+                "iconPath": "img/rank.png",
+                "pagePath": "pages/rankWorld/rankWorld",
+                "text": "排行榜"
+            },
+            {
+                "selectedIconPath": "img/chamed.png",
+                "iconPath": "img/cham.png",
+                "pagePath": "pages/cham/cham",
+                "text": "冠军预测"
+            },
+            {
+                "selectedIconPath": "img/starranked.png",
+                "iconPath": "img/starrank.png",
+                "pagePath": "pages/rank/rank",
+                "text": "球星榜"
+            },
+            {
+                "selectedIconPath": "img/myed.png",
+                "iconPath": "img/my.png",
+                "pagePath": "pages/my/my",
+                "text": "我的"
+            }
+        ]
+    }
+}
